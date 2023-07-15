@@ -34,4 +34,7 @@ if "{{ cookiecutter.open_source_license }}".lower() == "not open source":
     for file in files:
         os.remove(file)
 
+if "{{ cookiecutter.project_packaging }}" == "environment":
+    os.remove(".env")
+
 print(SUCCESS + "Project boilerplate initialized, let us get going!" + TERMINATOR)

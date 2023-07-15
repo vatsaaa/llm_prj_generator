@@ -1,0 +1,48 @@
+openapi: 3.0.3
+info:
+  title: Online Product Listing
+  description: ping pong
+  termsOfService: https://no.terms.yet
+  contact:
+    email: ankur.vatsa@gmail.com
+  license:
+    name: GNU GPLv3
+    url: https://github.com/manil-007/OnlineProductListing/blob/main/LICENSE.md
+  version: 1.0.0
+externalDocs:
+  description: README.md
+  url: https://github.com/manil-007/OnlineProductListing/blob/main/README.md
+servers:
+  - url: /api/v1
+paths:
+  /ping:
+    get:
+      summary: Health check url
+      description: Check for alive and kicking api
+      operationId: controllers.controllers.ping
+      parameters:
+        - name: username
+          in: query
+          required: true
+          schema:
+            type: string
+            default: vatsaaa
+            description: Pong to ping
+      tags:
+        - Health check
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: string
+            application/xml:
+              schema:
+                type: string
+        '400':
+          description: Invalid resource id supplied
+        '404':
+          description: Resource not found
+        '405':
+          description: Validation exception

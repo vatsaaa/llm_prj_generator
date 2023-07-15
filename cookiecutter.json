@@ -1,0 +1,26 @@
+{
+    "project_name": "My first awesome LLM project",
+    "project_version": "0.0.1",
+    "project_packaging": ["pip", "poetry"],
+    "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
+    "project_type": ["Non-coversational", "Conversational", "Generative"],
+    "interface_type": ["restful", "streamlit", "cli", "library"],
+    "llm_provider": ["Azure OpenAI", "OpenAI", "Bard"],
+    "secrets_store": ["environment"],
+    "use_memory": ["yes", "no"],
+    "use_docker": ["yes", "no"],
+    "use_database": ["None", "Postgres", "MySQL"],
+    "use_webscraping": ["yes", "no"],
+    "use_vectorstore": ["None", "FAISS", "Cohere", "Pinecone"],
+    "author": "Ankur Vatsa",
+    "domain": "gmail.com",
+    "author_email": "{{ cookiecutter.author.lower() | trim() |replace(' ', '.') }}@{{ cookiecutter.domain.lower() | trim() }}", 
+    "open_source_license": [
+        "Not open source",
+        "Apache Software License 2.0",
+        "BSD",
+        "GPLv3",
+        "MIT"
+    ],
+    "project_description": "My first awesome {{ cookiecutter.project_type }} LLM project based on services provided by {{ cookiecutter.llm_provider}}. This project can be used as {{ cookiecutter.interface_type }}."
+}

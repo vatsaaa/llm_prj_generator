@@ -1,0 +1,75 @@
+aiohttp==3.8.4
+aiosignal==1.3.1
+async-timeout==4.0.2
+attrs==23.1.0
+{%- if cookiecutter.use_webscraping == 'yes' %}
+beautifulsoup4==4.12.2
+bs4==0.0.1
+{%- endif %}
+certifi==2023.5.7
+charset-normalizer==3.1.0
+click==8.1.3
+clickclick==20.10.2
+dataclasses-json==0.5.9
+{%- if cookiecutter.use_vectorstore == 'FAISS' %}
+faiss-cpu==1.7.4
+{%- endif %}
+{%- if cookiecutter.interface_type == 'restful' %}
+connexion==2.14.2
+Flask==2.2.5
+Flask-Cors==3.0.10
+swagger-ui-bundle==0.0.9
+waitress==2.1.2
+{%- endif %}
+{%- if cookiecutter.interface_type == 'streamlit' %}
+streamlit==1.23.1
+streamlit-camera-input-live==0.2.0
+streamlit-card==0.0.5
+streamlit-embedcode==0.1.2
+streamlit-extras==0.2.7
+streamlit-faker==0.0.2
+streamlit-image-coordinates==0.1.3
+streamlit-keyup==0.2.0
+streamlit-toggle-switch==1.0.2
+streamlit-vertical-slider==1.0.2
+{%- endif %}
+frozenlist==1.3.3
+idna==3.4
+inflection==0.5.1
+itsdangerous==2.1.2
+Jinja2==3.1.2
+jsonschema==4.17.3
+langchain==0.0.225
+langchainplus-sdk==0.0.20
+MarkupSafe==2.1.3
+marshmallow==3.19.0
+marshmallow-enum==1.5.1
+multidict==6.0.4
+mypy-extensions==1.0.0
+numexpr==2.8.4
+numpy==1.25.0
+openai==0.27.8
+openapi-schema-pydantic==1.2.4
+packaging==23.1
+pydantic==1.10.11
+pyrsistent==0.19.3
+python-dotenv==1.0.0
+PyYAML==6.0
+regex==2023.6.3
+requests==2.31.0
+six==1.16.0
+soupsieve==2.4.1
+{%- if cookiecutter.use_database == 'Postgres' %}
+SQLAlchemy==2.0.18
+{%- endif %}
+{%- if cookiecutter.use_database == 'MySQL' %}
+SQLAlchemy==2.0.18
+{%- endif %}
+tenacity==8.2.2
+tiktoken==0.4.0
+tqdm==4.65.0
+typing-inspect==0.9.0
+typing_extensions==4.7.1
+urllib3==2.0.3
+Werkzeug==2.2.3
+yarl==1.9.2
